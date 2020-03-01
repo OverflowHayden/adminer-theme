@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "build": "webpack --progress",
+    "watch": "webpack --watch --progress"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "bootstrap-reboot": "^4.3.1",
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-csso": "^4.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.2",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.2.0",
+    "stylelint-selector-bem-pattern": "^2.1.0",
+    "stylelint-webpack-plugin": "^1.2.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

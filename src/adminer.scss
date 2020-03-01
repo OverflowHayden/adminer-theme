@@ -1,0 +1,16 @@
+@import '~bootstrap-reboot/index';
+@import 'colors';
+
+body {
+    background: $color-bg;
+    color: $color-text;
+
+    @media (prefers-color-scheme: dark) {
+        background: $color-bg--dark;
+        color: $color-text--dark;
+    }
+}
+
+p, span, div, label {
+    color: inherit;
+}
