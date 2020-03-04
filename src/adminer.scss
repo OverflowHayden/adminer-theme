@@ -35,7 +35,7 @@ a {
     }
 
     &:visited {
-        color: inherit;
+        color: $color-primary;
     }
 }
 
@@ -61,7 +61,7 @@ h1, #h1 {
     width: 6rem;
     height: 5rem;
 
-@media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: dark) {
         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MzAuNjkyIDQzNy4yMjMwNSI+PHRpdGxlPmFkbWluZXItbG9nbzwvdGl0bGU+PHJlY3QgeD0iLTEyNS45Mzg5OCIgeT0iLTIxNC45MzM5OSIgd2lkdGg9Ijc5MCIgaGVpZ2h0PSI3OTIiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNMzAwLjcyMywxMjguODMyYy03LjAwMy0yNy41MDMtNTguODQ5LTU0LjU0My0xNDkuNDMyLTU0LjU0My05MC41MTcsMC0xNDIuMzU4LDI3LjAwNC0xNDkuNDE2LDU0LjQ4OEE3LjY1NzI0LDcuNjU3MjQsMCwwLDAsMSwxMzIuMjlWMzgyLjExYTcuNzU1NzEsNy43NTU3MSwwLDAsMCwyLjc5NCw1LjkzN2MxMS45OTIsMjUuNTQ5LDYyLjgyMiw0OS4xNzYsMTQ3LjQ5Niw0OS4xNzYsODQuNjk3LDAsMTM1LjUzMi0yMy42MzksMTQ3LjUwNy00OS4xOTlhNy43Mzk2LDcuNzM5NiwwLDAsMCwyLjc2OC01LjkxM3YtNS42OTFjMC0uMDQ3LjAwOC0uMDkuMDA4LS4xMzcsMC0uMDI3LS4wMDgtLjA1LS4wMDgtLjA3N1YyOTQuOTgyYzAtLjA0Ni4wMDgtLjA5LjAwOC0uMTM2LDAtLjAyOC0uMDA4LS4wNTEtLjAwOC0uMDc4VjIxNS4xNzZjMC0uMDQ4LjAwOC0uMDkuMDA4LS4xMzcsMC0uMDI3LS4wMDgtLjA1Mi0uMDA4LS4wNzlWMTM1LjM3YzAtLjA0Ny4wMDgtLjA5LjAwOC0uMTM3cy0uMDA4LS4wOTQtLjAwOC0uMTQxVjEzMi4yOUE3LjY4MDU5LDcuNjgwNTksMCwwLDAsMzAwLjcyMywxMjguODMyWm0tMTQuNzcsMTY2LjEwNmMtLjE2NSwyMS40MTUtNTUuNDE3LDQ1LjIzMy0xMzQuNjYyLDQ1LjIzMy03OS4zNiwwLTEzNC42NjgtMjMuODg5LTEzNC42NjgtNDUuMzMsMC0uMDI3LS4wMDgtLjA1Mi0uMDA4LS4wNzlWMjQyLjU5M2MyMi4yNjEsMTguNzE3LDY3Ljk2NywzMy4zODcsMTM0LjY3NiwzMy4zODcsNjYuNjk4LDAsMTEyLjM5Mi0xNC42NjUsMTM0LjY2Mi0zMy4zNzVabTAtNzkuODA1Yy0uMTY1LDIxLjQxMy01NS40MTgsNDUuMjMzLTEzNC42NjIsNDUuMjMzLTc5LjM2LDAtMTM0LjY2OC0yMy44ODktMTM0LjY2OC00NS4zMzEsMC0uMDI2LS4wMDgtLjA1MS0uMDA4LS4wNzhWMTYyLjc4OGMyMi4yNjEsMTguNzE2LDY3Ljk2NywzMy4zODYsMTM0LjY3NiwzMy4zODYsNjYuNjk4LDAsMTEyLjM5Mi0xNC42NjEsMTM0LjY2Mi0zMy4zNzRaTTE1MS4yOTEsODkuOTAzYzc5LjI0NCwwLDEzNC40OTcsMjMuODE4LDEzNC42NjIsNDUuMjMzdi4xOTFjLS4xNjUsMjEuNDE1LTU1LjQxNyw0NS4yMzMtMTM0LjY2Miw0NS4yMzMtNzkuMzYsMC0xMzQuNjY4LTIzLjg4OS0xMzQuNjY4LTQ1LjMyN1M3MS45MzEsODkuOTAzLDE1MS4yOTEsODkuOTAzWm0wLDMzMS43MDZjLTc5LjM2LDAtMTM0LjY2OC0yMy44OS0xMzQuNjY4LTQ1LjMyNywwLS4wMjctLjAwOC0uMDUtLjAwOC0uMDc3VjMyMi40MDNDMzguODc2LDM0MS4xMiw4NC41ODIsMzU1Ljc5LDE1MS4yOTEsMzU1Ljc5YzY2LjY5OCwwLDExMi4zOTItMTQuNjY1LDEzNC42NjItMzMuMzc1djUzLjk2MUMyODUuNzg4LDM5Ny43OTQsMjMwLjUzNSw0MjEuNjA5LDE1MS4yOTEsNDIxLjYwOVoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMzkxLjk0MSwxNTEuNTE3LDMyMC44MjUsOTEuNTg1bDcxLjExNi01OS44MjcsMTYuNDYsMTYuNjcxTDM1Ni4wNjYsOTEuMzczbDUyLjMzNSw0My40NzJaIiBmaWxsPSIjMDA3NWYyIi8+PHBhdGggZD0iTTUzMC42OTIsNDUuNzkzYTQ0LjA4MzU0LDQ0LjA4MzU0LDAsMCwxLTIuNjkxLDE1Ljg4LDM1LjA0MjM1LDM1LjA0MjM1LDAsMCwxLTcuNzAyLDEyLjEzNCwzOS4wMDM3MSwzOS4wMDM3MSwwLDAsMS0xMi4wODEsOC4yODMsNTYuODEzMjQsNTYuODEzMjQsMCwwLDEtMTUuODI3LDQuMzI2bC0xLjA1NiwxOS44MzdoLTIyLjA1Mkw0NjcuMzg0LDY2LjU4aDE1LjNhMjQuMjUwOTMsMjQuMjUwOTMsMCwwLDAsOC45MTUtMS40NzcsMTYuNTYzNDQsMTYuNTYzNDQsMCwwLDAsNi4xMi00LjAxLDE1LjczMjMzLDE1LjczMjMzLDAsMCwwLDMuNDgyLTUuODU2LDIyLjA1ODA2LDIyLjA1ODA2LDAsMCwwLDEuMTA3LTcuMDE3LDIwLjM1MzI2LDIwLjM1MzI2LDAsMCwwLTguOTE2LTE3LjE0NiwzNS40MTI0MSwzNS40MTI0MSwwLDAsMC0xMS42NTktNS4yMjMsNjYuMTg5LDY2LjE4OSwwLDAsMC0xNi45ODctMS44OTloLTYuMjI2VjBoNy4yOHExNi4yNDgsMCwyOC4zODQsMy44NTFhNjMuNjY1ODgsNjMuNjY1ODgsMCwwLDEsMjAuMjU4LDEwLjIzNSw0Mi42MDM2OSw0Mi42MDM2OSwwLDAsMSwxMi4xODgsMTQuNjE0QTM4LjE4NTc3LDM4LjE4NTc3LDAsMCwxLDUzMC42OTIsNDUuNzkzWm0tMzIuOTIxLDg4Ljg0MmExNS44MzM0MywxNS44MzM0MywwLDAsMS0xLjM3MSw2LjU0MiwxNy44ODgzOCwxNy44ODgzOCwwLDAsMS0zLjY5Myw1LjM4MSwxNi44Mjk1NiwxNi44Mjk1NiwwLDAsMS01LjQ4NiwzLjY0LDE3LjM5MDQyLDE3LjM5MDQyLDAsMCwxLTYuNzUzLDEuMzE5LDE3LjAwMywxNy4wMDMsMCwwLDEtMTIuMTM1LTQuOTU5LDE3LjgxMzEsMTcuODEzMSwwLDAsMS0zLjY5Mi01LjM4MSwxNi4yODI3LDE2LjI4MjcsMCwwLDEsMC0xMy4wODQsMTcuODY4NjksMTcuODY4NjksMCwwLDEsMy42OTItNS4zODEsMTcuMDAzLDE3LjAwMywwLDAsMSwxMi4xMzUtNC45NTksMTcuMzkwNDIsMTcuMzkwNDIsMCwwLDEsNi43NTMsMS4zMTksMTYuODYxNzgsMTYuODYxNzgsMCwwLDEsNS40ODYsMy42NCwxNy45MzgsMTcuOTM4LDAsMCwxLDMuNjkzLDUuMzgxQTE1LjgzNjgxLDE1LjgzNjgxLDAsMCwxLDQ5Ny43NzEsMTM0LjYzNVoiIGZpbGw9IiMwMDc1ZjIiLz48L3N2Zz4=);
     }
 }
@@ -69,10 +69,14 @@ h1, #h1 {
 h2 {
     background: none;
     border: none;
-    font-size: 4.8rem;
+    font-size: 3.2rem;
     margin: 0 0 1em;
     padding: 0;
     color: $color-text;
+
+    &:first-line {
+        font-size: 4.8rem;
+    }
 
     @media (prefers-color-scheme: dark) {
         color: $color-text--dark;
@@ -91,15 +95,46 @@ h2 {
     width: auto;
     order: -1;
     overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: darken($color-bg, 4%) darken($color-bg, 4%);
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: darken($color-bg, 4%);
+    }
+
+    &:hover {
+        scrollbar-color: $color-primary $color-bg;
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-primary;
+        }
+    }
 
     @media (prefers-color-scheme: dark) {
         background: $color-bg--dark;
         color: $color-text--dark;
-    }
+        scrollbar-width: thin;
+        scrollbar-color: $color-bg--dark $color-bg--dark;
 
-    .version {
-        color: $color-primary;
-        font-size: 1.6rem;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $color-bg--dark;
+        }
+
+        &:hover {
+            scrollbar-color: $color-primary $color-bg--dark;
+
+            &::-webkit-scrollbar-thumb {
+                background: $color-primary;
+            }
+        }
     }
 
     select {
@@ -109,6 +144,26 @@ h2 {
             background: lighten($color-bg--dark, 4%);
         }
     }
+
+    p {
+        border: none;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    .version {
+        color: $color-primary;
+        font-size: 1.6rem;
+    }
+
+    .links {
+        border: none;
+        padding: 0;
+
+        @media (prefers-color-scheme: dark) {
+
+        }
+    }
 }
 
 #content {
@@ -116,15 +171,78 @@ h2 {
     margin: 0;
     padding: 4rem;
     overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $color-bg $color-bg;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $color-bg;
+    }
+
+    &:hover {
+        scrollbar-color: $color-primary $color-bg;
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-primary;
+        }
+    }
 
     @media (prefers-color-scheme: dark) {
         background: lighten($color-bg--dark, 4%);
+        scrollbar-width: thin;
+        scrollbar-color: lighten($color-bg--dark, 4%) lighten($color-bg--dark, 4%);
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: lighten($color-bg--dark, 4%);
+        }
+
+        &:hover {
+            scrollbar-color: $color-primary lighten($color-bg--dark, 4%);
+
+            &::-webkit-scrollbar-thumb {
+                background: $color-primary;
+            }
+        }
+    }
+
+    p {
+        margin-right: 0;
+    }
+
+    .links {
+        margin: 0 0 2rem 0;
+
+        a {
+            border-bottom: .3rem solid transparent;
+            font-size: 1.6rem;
+            line-height: 1.4;
+            padding: .6em 1.4em;
+            margin: 0;
+
+            &:hover {
+                border-color: $color-primary;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &.active {
+                border-color: $color-primary;
+                font-weight: 400;
+            }
+        }
     }
 }
 
 table {
     border: .1rem solid darken($color-bg, 10%);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0 0 2.4rem;
 
     @media (prefers-color-scheme: dark) {
@@ -143,6 +261,8 @@ th, td {
 thead {
     th, td {
         background: darken($color-bg, 4%);
+        font-size: 1.6rem;
+        font-weight: 500;
 
         @media (prefers-color-scheme: dark) {
             background: $color-bg--dark;
@@ -152,6 +272,12 @@ thead {
 
 tbody {
     tr {
+        border-bottom: .1rem solid darken($color-bg, 4%);
+
+        @media (prefers-color-scheme: dark) {
+            border-color: $color-bg--dark;
+        }
+
         &:hover th, &:hover td {
             background: darken($color-bg, 2%);
 
@@ -166,14 +292,19 @@ tbody {
     }
 }
 
+label {
+    margin: 0 .8em 0 0;
+}
+
 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="image"]), select, textarea {
     background: darken($color-bg, 3%);
     border: none;
     border-radius: .2rem;
     color: $color-text;
     font-size: 1.6rem;
-    padding: .45em 1em;
+    padding: .2em 1em;
     width: 100%;
+    height: 3.6rem;
 
     &:hover {
         background: darken($color-bg, 4%);
@@ -205,21 +336,70 @@ input[type="checkbox"] {
     margin-right: .4em;
 }
 
-button, input[type="submit"] {
+button, input[type="submit"], .loadmore {
     background: $color-primary;
     border: none;
     border-radius: .6rem;
     box-shadow: none;
     color: #fff;
     cursor: pointer;
-    font-size: 1.8rem;
+    display: inline-block;
+    font-size: 1.6rem;
     padding: .6em 2em;
     margin-right: .8em;
     outline: none;
 
-    &:hover {
+    &:hover, &:visited:hover, &:link:hover {
         background: darken($color-primary, 4%);
         box-shadow: 0 .2rem .5rem 0 rgba(#000, .26);
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.loadmore {
+    margin: 0 auto 2rem;
+}
+
+code {
+    background: darken($color-bg, 4%);
+    border-radius: .4rem;
+    padding: 2rem;
+
+    @media (prefers-color-scheme: dark) {
+        background: $color-bg--dark;
+        color: $color-text--dark;
+    }
+}
+
+code.jush-sql {
+    display: block;
+    width: 100%;
+    margin: 2rem 0 0;
+
+    + .time {
+        display: inline-block;
+        margin: .6rem 0 2rem auto;
+        float: right;
+        vertical-align: baseline;
+
+        + a {
+            display: inline-block;
+            margin: .6rem 0 2rem;
+            vertical-align: baseline;
+        }
+    }
+
+    a {
+        color: $color-primary;
+    }
+}
+
+.jush {
+    color: #000;
+
+    @media (prefers-color-scheme: dark) {
+        color: #c9c9c9;
     }
 }
 
@@ -233,10 +413,17 @@ button, input[type="submit"] {
 }
 
 .footer {
-    background: none;
+    background: darken($color-bg, 4%);
     border-top: .2rem solid $color-primary;
     border-image: none;
     margin: 0;
+    padding: 2rem;
+    position: relative;
+
+    @media (prefers-color-scheme: dark) {
+        background: $color-bg--dark;
+        color: $color-text--dark;
+    }
 
     > div {
         background: none;
@@ -247,5 +434,27 @@ button, input[type="submit"] {
 .logout {
     input[type="submit"] {
         font-size: 80%;
+    }
+}
+
+#tables {
+    border: none;
+    padding: 0;
+
+    li {
+        display: flex;
+    }
+
+    .select {
+        flex: 0 0 5.2rem;
+        order: 2;
+        margin: 0 0 0 auto;
+        text-align: right;
+    }
+
+    .structure {
+        flex: 0 1 calc(100% - 5.2rem);
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
