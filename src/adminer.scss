@@ -73,6 +73,8 @@ h2 {
     margin: 0 0 1em;
     padding: 0;
     color: $color-text;
+    word-spacing: 80vw;
+    word-wrap: break-word;
 
     &:first-line {
         font-size: 4.8rem;
@@ -217,6 +219,7 @@ h2 {
     }
 
     .links {
+        display: flex;
         margin: 0 0 2rem 0;
 
         a {
@@ -238,15 +241,60 @@ h2 {
             }
         }
     }
+
+    #form {
+        fieldset {
+            margin-right: 2rem;
+        }
+
+        input[type="submit"] {
+            font-size: 80%;
+        }
+
+        select, input:not([type="image"]):not([type="checkbox"]):not([type="radio"]) {
+            min-width: 6rem;
+            margin-right: 1rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        #fieldset-search select {
+            margin-right: 1rem;
+        }
+
+        #fieldset-sort label {
+            margin-left: 1rem;
+
+            input {
+                margin-right: .6em;
+            }
+        }
+    }
+
+    form fieldset > div {
+        margin: 2rem 0;
+
+        input[type="search"][name="query"] {
+            font-size: 120%;
+            height: 4.4rem;
+            margin-right: 1em;
+        }
+    }
 }
 
 table {
     border: .1rem solid darken($color-bg, 10%);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0 0 2.4rem;
 
     @media (prefers-color-scheme: dark) {
         border-color: $color-bg--dark;
+    }
+
+    code {
+        padding: .4em;
     }
 }
 
@@ -254,14 +302,14 @@ th, td {
     background: none;
     border: none;
     padding: .5rem 1.6rem;
-    height: 4.6rem;
+    height: 3.6rem;
     vertical-align: middle;
 }
 
 thead {
     th, td {
         background: darken($color-bg, 4%);
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 500;
 
         @media (prefers-color-scheme: dark) {
@@ -282,7 +330,7 @@ tbody {
             background: darken($color-bg, 2%);
 
             @media (prefers-color-scheme: dark) {
-                background: lighten($color-bg--dark, 5%);
+                background: lighten($color-bg--dark, 8%);
             }
         }
     }
@@ -292,8 +340,20 @@ tbody {
     }
 }
 
+.js .checkable .checked td, .js .checkable .checked th {
+    background: darken($color-bg, 10%);
+
+    @media (prefers-color-scheme: dark) {
+        background: lighten($color-bg--dark, 10%);
+    }
+}
+
 label {
     margin: 0 .8em 0 0;
+
+    input[type="checkbox"], input[type="radio"] {
+        margin-right: .6em;
+    }
 }
 
 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="image"]), select, textarea {
@@ -301,10 +361,9 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type=
     border: none;
     border-radius: .2rem;
     color: $color-text;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: .2em 1em;
-    width: 100%;
-    height: 3.6rem;
+    height: 2.8rem;
 
     &:hover {
         background: darken($color-bg, 4%);
@@ -401,11 +460,17 @@ code.jush-sql {
     @media (prefers-color-scheme: dark) {
         color: #c9c9c9;
     }
+
+    a {
+        color: $color-primary;
+    }
 }
 
 #breadcrumb {
     background: none;
     position: static;
+    margin: 0 0 2rem 0;
+    padding: 0;
 }
 
 #logins a, #tables a, #tables span {
@@ -428,6 +493,22 @@ code.jush-sql {
     > div {
         background: none;
         padding: 0;
+    }
+
+    input[type="submit"] {
+        font-size: 80%;
+    }
+
+    p {
+        margin-top: 1em;
+    }
+
+    select {
+        background: $color-bg;
+
+        @media (prefers-color-scheme: dark) {
+            background: lighten($color-bg--dark, 4%);
+        }
     }
 }
 
@@ -456,5 +537,13 @@ code.jush-sql {
         flex: 0 1 calc(100% - 5.2rem);
         text-overflow: ellipsis;
         overflow: hidden;
+    }
+
+    .active {
+        color: #000;
+
+        @media (prefers-color-scheme: dark) {
+            color: #fff;
+        }
     }
 }
