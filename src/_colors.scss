@@ -1,6 +1,9 @@
-$color-primary:                 #1877DD;
+$color-primary:                 hsl(211, 80%, 48%);
+$color-secondary:               hsl(13, 90%, 58%);
 
-$color-bg:                      #fff;
-$color-bg--dark:                #020305;
-$color-text:                    #000;
-$color-text--dark:              #fff;
+$color-bg:                      hsl(0, 0%, 100%);
+$color-bg--dark:                hsl(220, 43%, 8%);
+$color-text:                    hsl(0, 0%, 0%);
+$color-text--dark:              lighten(desaturate($color-primary, 20%), 34%);
+$color-error:                   hsl(0, 65%, 51%);
+$color-message:                 hsl(120, 33%, 43%);

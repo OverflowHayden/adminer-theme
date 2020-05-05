@@ -49,7 +49,7 @@ h1, #h1 {
     margin: 0;
 
     @media (prefers-color-scheme: dark) {
-        color: $color-text--dark;
+        color: lighten($color-text--dark, 20%);
     }
 }
 
@@ -81,7 +81,7 @@ h2 {
     }
 
     @media (prefers-color-scheme: dark) {
-        color: $color-text--dark;
+        color: lighten($color-text--dark, 20%);
     }
 }
 
@@ -166,6 +166,10 @@ h2 {
 
         }
     }
+
+    .message {
+        padding: .4em;
+    }
 }
 
 #content {
@@ -230,12 +234,14 @@ h2 {
             margin: 0;
 
             &:hover {
+                background: rgba($color-primary, .14);
                 border-color: $color-primary;
                 color: inherit;
                 text-decoration: none;
             }
 
             &.active {
+                background: rgba($color-primary, .14);
                 border-color: $color-primary;
                 font-weight: 400;
             }
@@ -296,6 +302,17 @@ table {
     code {
         padding: .4em;
     }
+
+    th a, td a {
+
+        @media (prefers-color-scheme: dark) {
+            color: lighten(saturate($color-primary, 80%), 34%);
+
+            &:visited {
+                color: lighten($color-primary, 34%);
+            }
+        }
+    }
 }
 
 th, td {
@@ -311,6 +328,7 @@ thead {
         background: darken($color-bg, 4%);
         font-size: 1.4rem;
         font-weight: 500;
+        border-bottom: .3rem solid $color-primary;
 
         @media (prefers-color-scheme: dark) {
             background: $color-bg--dark;
@@ -376,15 +394,15 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type=
     }
 
     @media (prefers-color-scheme: dark) {
-        background: $color-bg--dark;
+        background: darken($color-bg--dark, 2%);
         color: $color-text--dark;
 
         &:hover {
-            background: lighten($color-bg--dark, 1%);
+            background: $color-bg--dark;
         }
 
         &:focus {
-            background: lighten($color-bg--dark, 2%);
+            background: $color-bg--dark;
         }
     }
 }
@@ -396,9 +414,9 @@ input[type="checkbox"] {
 }
 
 button, input[type="submit"], .loadmore {
-    background: $color-primary;
+    background: $color-secondary;
     border: none;
-    border-radius: .6rem;
+    border-radius: .3em;
     box-shadow: none;
     color: #fff;
     cursor: pointer;
@@ -409,7 +427,7 @@ button, input[type="submit"], .loadmore {
     outline: none;
 
     &:hover, &:visited:hover, &:link:hover {
-        background: darken($color-primary, 4%);
+        background: darken($color-secondary, 6%);
         box-shadow: 0 .2rem .5rem 0 rgba(#000, .26);
         color: #fff;
         text-decoration: none;
@@ -533,7 +551,7 @@ code.jush-sql {
         text-align: right;
     }
 
-    .structure {
+    .structure, .view {
         flex: 0 1 calc(100% - 5.2rem);
         text-overflow: ellipsis;
         overflow: hidden;
@@ -544,6 +562,49 @@ code.jush-sql {
 
         @media (prefers-color-scheme: dark) {
             color: #fff;
+        }
+    }
+
+    a {
+        color: $color-text;
+
+        @media (prefers-color-scheme: dark) {
+            color: $color-text--dark;
+        }
+    }
+}
+
+.error, .message {
+    padding: .8em 1em;
+    margin-bottom: 1.4em;
+    border-radius: .4rem;
+}
+
+.error {
+    background: rgba($color-error, .16);
+    border: .2rem solid $color-error;
+    color: $color-error;
+}
+
+.message {
+    background: rgba($color-message, .16);
+    border: .2rem solid $color-message;
+    color: $color-message;
+}
+
+#schema  {
+    margin: 0;
+
+    .table {
+        background: darken($color-bg, 4%);
+        border: .1rem solid darken($color-bg, 10%);
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 1em;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-bg--dark;
+            border-color: $color-bg--dark;
         }
     }
 }
