@@ -1,0 +1,108 @@
+#content #form {
+    fieldset {
+        margin-right: 2rem;
+    }
+
+    input[type="submit"] {
+        font-size: 80%;
+    }
+
+    select, input:not([type="image"]):not([type="checkbox"]):not([type="radio"]) {
+        min-width: 6rem;
+        margin-right: 1rem;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    #fieldset-search select {
+        margin-right: 1rem;
+    }
+
+    #fieldset-sort label {
+        margin-left: 1rem;
+
+        input {
+            margin-right: .6em;
+        }
+    }
+}
+
+form fieldset > div {
+    margin: 2rem 0;
+
+    input[type="search"][name="query"] {
+        font-size: 120%;
+        height: 4.4rem;
+        margin-right: 1em;
+    }
+}
+
+label {
+    margin: 0 .8em 0 0;
+
+    input[type="checkbox"], input[type="radio"] {
+        margin-right: .6em;
+    }
+}
+
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="image"]), select, textarea {
+    background: darken($color-bg, 3%);
+    border: none;
+    border-radius: .2rem;
+    color: $color-text;
+    font-size: 1.4rem;
+    padding: .2em 1em;
+    height: 2.8rem;
+
+    &:hover {
+        background: darken($color-bg, 4%);
+    }
+
+    &:focus {
+        background: darken($color-bg, 6%);
+        box-shadow: 0 .2rem .5rem 0 rgba(#000, .26);
+        outline: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background: darken($color-bg--dark, 2%);
+        color: $color-text--dark;
+
+        &:hover {
+            background: $color-bg--dark;
+        }
+
+        &:focus {
+            background: $color-bg--dark;
+        }
+    }
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: .4em;
+}
+
+button, input[type="submit"], .loadmore {
+    background: $color-secondary;
+    border: none;
+    border-radius: .3em;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: .6em 2em;
+    margin-right: .8em;
+    outline: none;
+
+    &:hover, &:visited:hover, &:link:hover {
+        background: darken($color-secondary, 6%);
+        box-shadow: 0 .2rem .5rem 0 rgba(#000, .26);
+        color: #fff;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,33 @@
+code {
+    background: darken($color-bg, 4%);
+    border-radius: .4rem;
+    padding: 2rem;
+
+    @media (prefers-color-scheme: dark) {
+        background: $color-bg--dark;
+        color: $color-text--dark;
+    }
+}
+
+code.jush-sql {
+    display: block;
+    width: 100%;
+    margin: 2rem 0 0;
+
+    + .time {
+        display: inline-block;
+        margin: .6rem 0 2rem auto;
+        float: right;
+        vertical-align: baseline;
+
+        + a {
+            display: inline-block;
+            margin: .6rem 0 2rem;
+            vertical-align: baseline;
+        }
+    }
+
+    a {
+        color: $color-primary;
+    }
+}

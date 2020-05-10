@@ -1,0 +1,124 @@
+#menu {
+    background: darken($color-bg, 4%);
+    display: block;
+    flex: 0 0 32rem;
+    margin: 0;
+    padding: 4rem;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    order: -1;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: darken($color-bg, 4%) darken($color-bg, 4%);
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: darken($color-bg, 4%);
+    }
+
+    &:hover {
+        scrollbar-color: $color-primary $color-bg;
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-primary;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background: $color-bg--dark;
+        color: $color-text--dark;
+        scrollbar-width: thin;
+        scrollbar-color: $color-bg--dark $color-bg--dark;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $color-bg--dark;
+        }
+
+        &:hover {
+            scrollbar-color: $color-primary $color-bg--dark;
+
+            &::-webkit-scrollbar-thumb {
+                background: $color-primary;
+            }
+        }
+    }
+
+    select {
+        background: $color-bg;
+
+        @media (prefers-color-scheme: dark) {
+            background: lighten($color-bg--dark, 4%);
+        }
+    }
+
+    p {
+        border: none;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    .version {
+        color: $color-primary;
+        font-size: 1.6rem;
+    }
+
+    .links {
+        border: none;
+        padding: 0;
+
+        @media (prefers-color-scheme: dark) {
+
+        }
+    }
+
+    .message {
+        padding: .4em;
+    }
+}
+
+#tables {
+    border: none;
+    padding: 0;
+
+    li {
+        display: flex;
+    }
+
+    .select {
+        flex: 0 0 5.2rem;
+        order: 2;
+        margin: 0 0 0 auto;
+        text-align: right;
+    }
+
+    .structure, .view {
+        flex: 0 1 calc(100% - 5.2rem);
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .active {
+        color: #000;
+
+        @media (prefers-color-scheme: dark) {
+            color: #fff;
+        }
+    }
+
+    a {
+        color: $color-text;
+
+        @media (prefers-color-scheme: dark) {
+            color: $color-text--dark;
+        }
+    }
+}

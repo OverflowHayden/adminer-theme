@@ -1,0 +1,75 @@
+table {
+    border: .1rem solid darken($color-bg, 10%);
+    font-size: 1.2rem;
+    margin: 0 0 2.4rem;
+
+    @media (prefers-color-scheme: dark) {
+        border-color: $color-bg--dark;
+    }
+
+    code {
+        padding: .4em;
+    }
+
+    th a, td a {
+
+        @media (prefers-color-scheme: dark) {
+            color: lighten(saturate($color-primary, 80%), 34%);
+
+            &:visited {
+                color: lighten($color-primary, 34%);
+            }
+        }
+    }
+}
+
+th, td {
+    background: none;
+    border: none;
+    padding: .5rem 1.6rem;
+    height: 3.6rem;
+    vertical-align: middle;
+}
+
+thead {
+    th, td {
+        background: darken($color-bg, 4%);
+        font-size: 1.4rem;
+        font-weight: 500;
+        border-bottom: .3rem solid $color-primary;
+
+        @media (prefers-color-scheme: dark) {
+            background: $color-bg--dark;
+        }
+    }
+}
+
+tbody {
+    tr {
+        border-bottom: .1rem solid darken($color-bg, 4%);
+
+        @media (prefers-color-scheme: dark) {
+            border-color: $color-bg--dark;
+        }
+
+        &:hover th, &:hover td {
+            background: darken($color-bg, 2%);
+
+            @media (prefers-color-scheme: dark) {
+                background: lighten($color-bg--dark, 8%);
+            }
+        }
+    }
+
+    .odd td {
+        background: none;
+    }
+}
+
+.js .checkable .checked td, .js .checkable .checked th {
+    background: darken($color-bg, 10%);
+
+    @media (prefers-color-scheme: dark) {
+        background: lighten($color-bg--dark, 10%);
+    }
+}

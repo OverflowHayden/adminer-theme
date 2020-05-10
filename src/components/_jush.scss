@@ -1,0 +1,11 @@
+.jush {
+    color: #000;
+
+    @media (prefers-color-scheme: dark) {
+        color: #c9c9c9;
+    }
+
+    a {
+        color: $color-primary;
+    }
+}
