@@ -3,7 +3,27 @@
 }
 
 .logout {
+    right: calc(100% - 32rem);
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+
     input[type="submit"] {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPmxvZ291dDwvdGl0bGU+PHBhdGggZD0iTTEwLDJWNEgyMlYyMEgxMHYySDI0VjJabTAsNy40MDhMMTIuOTYzLDEyLDEwLDE0LjU5MlYxM0gyVjExaDhaTTgsNVY5SDB2Nkg4djRsOC03WiIgZmlsbD0iI2Y0NWQzNCIvPjwvc3ZnPg==) no-repeat center center / 100%;
+        appearance: none;
+        cursor: pointer;
+        display: block;
         font-size: 80%;
+        width: 2.2rem;
+        height: 2.2rem;
+        text-indent: -999em;
+        margin: 1.5rem;
+        padding: 0;
+        transition: opacity .25s ease;
+
+        &:hover, &:focus {
+            outline: none;
+            opacity: .7;
+        }
     }
 }

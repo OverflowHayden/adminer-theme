@@ -20,22 +20,16 @@
         margin-right: 1rem;
     }
 
+    #fieldset-search div + div {
+        margin-top: .5rem;
+    }
+
     #fieldset-sort label {
         margin-left: 1rem;
 
         input {
             margin-right: .6em;
         }
-    }
-}
-
-form fieldset > div {
-    margin: 2rem 0;
-
-    input[type="search"][name="query"] {
-        font-size: 120%;
-        height: 4.4rem;
-        margin-right: 1em;
     }
 }
 
@@ -81,9 +75,32 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type=
 }
 
 input[type="checkbox"] {
+    appearance: none;
+    border: .2rem solid $color-primary;
+    border-radius: .2rem;
     display: inline-block;
-    vertical-align: baseline;
+    width: 1.8rem;
+    height: 1.8rem;
+    vertical-align: middle;
     margin-right: .4em;
+
+    &:checked {
+        background: rgba($color-primary, .10) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPmNoZWNrPC90aXRsZT48cGF0aCBkPSJNOSwyMS4wMzUsMCwxMi4zOTdsMi43OTEtMi44Nyw2LjE1Niw1Ljg3NEwyMS4xNTcsMi45NjUsMjQsNS43ODJaIiBmaWxsPSIjMTg3N2RjIi8+PC9zdmc+) no-repeat center center / auto 70%;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#content form fieldset > div {
+    margin: 2rem 0;
+
+    input[type="search"][name="query"] {
+        font-size: 120%;
+        height: 4.4rem;
+        margin-right: 1em;
+    }
 }
 
 button, input[type="submit"], .loadmore {

@@ -1,3 +1,7 @@
 .loadmore {
     margin: 0 auto 2rem;
+
+    &:visited {
+        color: inherit;
+    }
 }

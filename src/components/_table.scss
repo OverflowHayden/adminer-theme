@@ -26,7 +26,7 @@ table {
 th, td {
     background: none;
     border: none;
-    padding: .5rem 1.6rem;
+    padding: .5rem 3.6rem .5rem 1.6rem;
     height: 3.6rem;
     vertical-align: middle;
 }
@@ -34,9 +34,12 @@ th, td {
 thead {
     th, td {
         background: darken($color-bg, 4%);
+        box-shadow: inset 0 -.3rem 0 0 $color-primary;
         font-size: 1.4rem;
         font-weight: 500;
-        border-bottom: .3rem solid $color-primary;
+        padding: .6rem 3.6rem .9rem 1.6rem;
+        position: sticky;
+        top: -4.1rem;
 
         @media (prefers-color-scheme: dark) {
             background: $color-bg--dark;
@@ -72,4 +75,8 @@ tbody {
     @media (prefers-color-scheme: dark) {
         background: lighten($color-bg--dark, 10%);
     }
+}
+
+.js .column {
+    background: transparent;
 }
