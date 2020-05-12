@@ -48,6 +48,10 @@ h1, #h1 {
     @media (prefers-color-scheme: dark) {
         color: lighten($color-text--dark, 20%);
     }
+
+    #menu & {
+        font-size: 1.2rem;
+    }
 }
 
 #h1:before {
