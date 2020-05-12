@@ -10,7 +10,7 @@ module.exports = [
     {
         mode: 'development',
         entry: files,
-        devtool: "source-map",
+        //devtool: "source-map",
         optimization: {
             minimizer: [
                 new OptimizeCSSAssetsPlugin({})
@@ -33,18 +33,18 @@ module.exports = [
                         {
                             loader: 'css-loader', options: {
                                 import: false,
-                                sourceMap: true,
+                                sourceMap: false,
                                 importLoaders: 2
                             }
                         },
                         {
                             loader: 'postcss-loader', options: {
-                                sourceMap: true
+                                sourceMap: false
                             }
                         },
                         {
                             loader: 'sass-loader', options: {
-                                sourceMap: true,
+                                sourceMap: false,
                                 sassOptions: {
                                     includePaths: ["node_modules"]
                                 }

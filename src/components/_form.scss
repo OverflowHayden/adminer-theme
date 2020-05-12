@@ -91,7 +91,7 @@ input[type="checkbox"] {
     }
 
     &:checked {
-        background: rgba($color-primary, .10) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPmNoZWNrPC90aXRsZT48cGF0aCBkPSJNOSwyMS4wMzUsMCwxMi4zOTdsMi43OTEtMi44Nyw2LjE1Niw1Ljg3NEwyMS4xNTcsMi45NjUsMjQsNS43ODJaIiBmaWxsPSIjMTg3N2RjIi8+PC9zdmc+) no-repeat center center / auto 70%;
+        background: rgba($color-primary, .10) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPmNoZWNrPC90aXRsZT48cGF0aCBkPSJNMjAuMjg1LDIsOSwxMy41NjcsMy43MTQsOC41NTYsMCwxMi4yNzIsOSwyMSwyNCw1LjcxNVoiIGZpbGw9IiMxODc3ZGMiLz48L3N2Zz4=) no-repeat center center / auto 70%;
     }
 
     &:focus {
