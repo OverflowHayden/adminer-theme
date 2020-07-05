@@ -99,6 +99,16 @@
 
     li {
         display: flex;
+        transition: background .25s ease;
+        line-height: 1.6;
+
+        &:hover {
+            background: darken($color-bg, 3%);
+
+            @media (prefers-color-scheme: dark) {
+                background: lighten($color-bg--dark, 6%);
+            }
+        }
     }
 
     .select {
@@ -112,6 +122,10 @@
         flex: 0 1 calc(100% - 5.2rem);
         text-overflow: ellipsis;
         overflow: hidden;
+
+        &:hover {
+            overflow: visible;
+        }
     }
 
     .active {

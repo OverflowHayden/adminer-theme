@@ -8,4 +8,38 @@
     a {
         color: $color-primary;
     }
+
+    &.sqlarea {
+        background: darken($color-bg, 3%);
+        border: none !important;
+        border-radius: .2rem;
+        color: $color-text;
+        font-size: 1.4rem;
+        padding: 2rem !important;
+        height: auto !important;
+        margin-bottom: 2rem;
+
+        &:hover {
+            background: darken($color-bg, 4%);
+        }
+
+        &:focus {
+            background: darken($color-bg, 6%);
+            box-shadow: 0 .2rem .5rem 0 rgba(#000, .26);
+            outline: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background: darken($color-bg--dark, 2%);
+            color: $color-text--dark;
+
+            &:hover {
+                background: $color-bg--dark;
+            }
+
+            &:focus {
+                background: $color-bg--dark;
+            }
+        }
+    }
 }

@@ -9,7 +9,7 @@
 		  "ignore": ["stylelint-commands", "after-comment"]
 		} ],
 		"declaration-colon-space-after": "always",
-		"declaration-no-important": true,
+		"declaration-no-important": false,
 		"indentation": [4, {
 		  "except": ["value"],
           "ignore": ["inside-parens"]
