@@ -1,9 +1,9 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const files = [
-    './src/adminer.scss'
+    './src/adminer.scss',
 ];
 
 module.exports = [
@@ -13,7 +13,7 @@ module.exports = [
         //devtool: "source-map",
         optimization: {
             minimizer: [
-                new OptimizeCSSAssetsPlugin({})
+                new OptimizeCSSAssetsPlugin({}),
             ],
         },
         module: {
@@ -23,8 +23,8 @@ module.exports = [
                     test: /\.css$/,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        "css-loader?importLoaders=1"
-                    ]
+                        'css-loader?importLoaders=1',
+                    ],
                 },
                 {
                     test: /\.(sass|scss)$/,
@@ -32,36 +32,36 @@ module.exports = [
                         MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader', options: {
-                                import: false,
+                                import: true,
                                 sourceMap: false,
-                                importLoaders: 2
-                            }
+                                importLoaders: 2,
+                            },
                         },
                         {
                             loader: 'postcss-loader', options: {
-                                sourceMap: false
-                            }
+                                sourceMap: false,
+                            },
                         },
                         {
                             loader: 'sass-loader', options: {
                                 sourceMap: false,
                                 sassOptions: {
-                                    includePaths: ["node_modules"]
-                                }
-                            }
-                        }
-                    ]
+                                    includePaths: ['node_modules'],
+                                },
+                            },
+                        },
+                    ],
                 },
-            ]
+            ],
         },
         plugins: [
             new StyleLintPlugin({
                 configFile: '.stylelintrc',
+                files: 'src/**/*.s?(a|c)ss',
             }),
             new MiniCssExtractPlugin({// define where to save the file
                 filename: 'adminer.css',
-                allChunks: true,
             }),
-        ]
+        ],
     },
-]
+];

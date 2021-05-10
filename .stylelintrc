@@ -1,33 +1,63 @@
 {
-	"plugins": [
-		"stylelint-selector-bem-pattern"
-	],
-	"rules": {
-		"block-no-empty": null,
-		"color-no-invalid-hex": true,
-		"comment-empty-line-before": [ "always", {
-		  "ignore": ["stylelint-commands", "after-comment"]
-		} ],
-		"declaration-colon-space-after": "always",
-		"declaration-no-important": false,
-		"indentation": [4, {
-		  "except": ["value"],
-          "ignore": ["inside-parens"]
-		}],
-		"max-empty-lines": 2,
-		"max-nesting-depth": 4,
-		"rule-empty-line-before": [ "always", {
-		  "except": ["first-nested"],
-		  "ignore": ["after-comment", "inside-block"]
-		} ],
-		"unit-whitelist": ["em", "rem", "%", "px", "s", "vh", "vw", "deg"],
-		"plugin/selector-bem-pattern": {
-			"componentName": "[A-Z]+",
-			"componentSelectors": {
-			  "initial": "^\\.{componentName}(?:-[a-z]+)?$",
-			  "combined": "^\\.combined-{componentName}-[a-z]+$"
-			},
-			"utilitySelectors": "^\\.util-[a-z]+$"
-		},
-	}
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": [
+          "stylelint-commands",
+          "after-comment"
+        ]
+      }
+    ],
+    "declaration-colon-space-after": "always",
+    "declaration-no-important": true,
+    "indentation": [
+      4,
+      {
+        "except": [
+          "value"
+        ],
+        "ignore": [
+          "inside-parens"
+        ]
+      }
+    ],
+    "max-empty-lines": 2,
+    "max-nesting-depth": 4,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "inside-block"
+        ]
+      }
+    ],
+    "unit-allowed-list": [
+      "em",
+      "rem",
+      "%",
+      "px",
+      "s",
+      "vh",
+      "vw",
+      "deg"
+    ],
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
+  }
 }

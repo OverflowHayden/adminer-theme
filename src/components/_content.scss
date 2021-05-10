@@ -5,6 +5,7 @@
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: $color-bg $color-bg;
+    order: -1;
 
     &::-webkit-scrollbar {
         width: 10px;
