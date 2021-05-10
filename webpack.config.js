@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const files = [
     './src/adminer.scss',
@@ -12,8 +12,9 @@ module.exports = [
         entry: files,
         //devtool: "source-map",
         optimization: {
+            minimize: true,
             minimizer: [
-                new OptimizeCSSAssetsPlugin({}),
+                new CssMinimizerPlugin(),
             ],
         },
         module: {
