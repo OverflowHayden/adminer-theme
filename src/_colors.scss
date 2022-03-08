@@ -2,7 +2,7 @@ $color-primary:                 hsl(211, 80%, 48%);
 $color-secondary:               hsl(13, 90%, 58%);
 
 $color-bg:                      hsl(0, 0%, 100%);
-$color-bg--dark:                hsl(220, 43%, 8%);
+$color-bg--dark:                hsl(220, 43%, 12%);
 $color-text:                    hsl(0, 0%, 0%);
 $color-text--dark:              lighten(desaturate($color-primary, 20%), 34%);
 $color-error:                   hsl(0, 65%, 51%);
