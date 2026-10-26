@@ -1,15 +1,12 @@
 code {
-    background: darken($color-bg, 4%);
+    background: var(--theme-surface);
     border-radius: .4rem;
+    color: var(--theme-text);
     padding: 2rem;
-
-    @media (prefers-color-scheme: dark) {
-        background: $color-bg--dark;
-        color: $color-text--dark;
-    }
 }
 
-code.jush-sql {
+// The executed query above a result; the language class differs per driver (jush-sql, jush-sqlite, …).
+code.sql {
     display: block;
     width: 100%;
     margin: 2rem 0 0;
@@ -28,6 +25,11 @@ code.jush-sql {
     }
 
     a {
-        color: $color-primary;
+        color: var(--theme-primary);
     }
+}
+
+.time {
+    color: inherit;
+    opacity: .7;
 }

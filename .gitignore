@@ -1,6 +1,5 @@
 .idea
 node_modules
 index.php
-dist/main.js
-dist/main.js.map
 /adminer.css
+adminer-plugins.php

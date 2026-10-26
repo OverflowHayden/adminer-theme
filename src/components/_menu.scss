@@ -1,73 +1,34 @@
 #menu {
-    background: darken($color-bg, 4%);
-    display: block;
-    flex: 0 0 32rem;
+    background: var(--theme-surface);
     margin: 0;
     padding: 4rem;
-    position: relative;
-    top: auto;
-    left: auto;
-    width: auto;
-    order: -2;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: darken($color-bg, 4%) darken($color-bg, 4%);
 
-    &::-webkit-scrollbar {
-        width: 10px;
+    select, input:not([type="submit"]) {
+        background: var(--theme-bg);
     }
 
-    &::-webkit-scrollbar-track {
-        background: darken($color-bg, 4%);
-    }
-
-    &:hover {
-        scrollbar-color: $color-primary $color-bg;
-
-        &::-webkit-scrollbar-thumb {
-            background: $color-primary;
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        background: $color-bg--dark;
-        color: $color-text--dark;
-        scrollbar-width: thin;
-        scrollbar-color: $color-bg--dark $color-bg--dark;
-
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: $color-bg--dark;
-        }
-
-        &:hover {
-            scrollbar-color: $color-primary $color-bg--dark;
-
-            &::-webkit-scrollbar-thumb {
-                background: $color-primary;
-            }
-        }
-    }
-
-    select {
-        background: $color-bg;
-
-        @media (prefers-color-scheme: dark) {
-            background: lighten($color-bg--dark, 4%);
-        }
-    }
-
-    p {
+    p, #lang {
         border: none;
         padding: 0;
         margin: 2rem 0;
     }
 
+    label {
+        margin: 0 .8em 0 0;
+    }
+
+    input[type="submit"] {
+        font-size: 1.2rem;
+        padding: .5em 1.2em;
+    }
+
+    optgroup {
+        font-style: normal;
+        color: var(--theme-primary);
+    }
+
     .version {
-        color: $color-primary;
+        color: var(--theme-primary);
         font-size: 1.4rem;
     }
 
@@ -82,10 +43,10 @@
     .links {
         border: none;
         padding: 0;
+    }
 
-        @media (prefers-color-scheme: dark) {
-
-        }
+    .active {
+        color: var(--theme-heading);
     }
 
     .message {
@@ -103,11 +64,7 @@
         line-height: 1.6;
 
         &:hover {
-            background: darken($color-bg, 3%);
-
-            @media (prefers-color-scheme: dark) {
-                background: lighten($color-bg--dark, 6%);
-            }
+            background: var(--theme-input-hover);
         }
     }
 
@@ -118,7 +75,7 @@
         text-align: right;
     }
 
-    .structure, .view {
+    .structure, .view, span {
         flex: 0 1 calc(100% - 5.2rem);
         text-overflow: ellipsis;
         overflow: hidden;
@@ -128,19 +85,15 @@
         }
     }
 
-    .active {
-        color: #000;
-
-        @media (prefers-color-scheme: dark) {
-            color: #fff;
-        }
-    }
-
     a {
-        color: $color-text;
-
-        @media (prefers-color-scheme: dark) {
-            color: $color-text--dark;
-        }
+        color: var(--theme-text);
     }
+
+    .active {
+        color: var(--theme-heading);
+    }
+}
+
+#filter-field {
+    width: 100%;
 }

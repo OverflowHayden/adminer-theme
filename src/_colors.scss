@@ -1,9 +1,10 @@
-$color-primary:                 hsl(211, 80%, 48%);
-$color-secondary:               hsl(13, 90%, 58%);
+@use 'sass:color';
 
-$color-bg:                      hsl(0, 0%, 100%);
-$color-bg--dark:                hsl(220, 43%, 8%);
-$color-text:                    hsl(0, 0%, 0%);
-$color-text--dark:              lighten(desaturate($color-primary, 20%), 34%);
-$color-error:                   hsl(0, 65%, 51%);
-$color-message:                 hsl(120, 33%, 43%);
+$color-primary:                 hsl(211deg 80% 48%);
+$color-secondary:               hsl(13deg 90% 58%);
+$color-bg:                      hsl(0deg 0% 100%);
+$color-bg--dark:                hsl(220deg 43% 8%);
+$color-text:                    hsl(0deg 0% 0%);
+$color-text--dark:              color.adjust($color-primary, $saturation: -20%, $lightness: 34%, $space: hsl);
+$color-error:                   hsl(0deg 65% 51%);
+$color-message:                 hsl(120deg 33% 43%);

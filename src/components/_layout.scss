@@ -1,0 +1,75 @@
+// Adminer 6 renders `body > #content` followed by `body > #foot > (#menu, form > .logout)`.
+// On wide screens the theme turns that into a sidebar and a scrolling content column; below 801px
+// Adminer's own pop-up menu (opened by #menuopen) is kept.
+@mixin scrollbar($track) {
+    scrollbar-width: thin;
+    scrollbar-color: $track $track;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $track;
+    }
+
+    &:hover {
+        scrollbar-color: var(--theme-primary) $track;
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--theme-primary);
+        }
+    }
+}
+
+#content {
+    background: var(--theme-bg);
+    margin: 0;
+    padding: var(--theme-gutter);
+}
+
+#foot {
+    background: var(--theme-surface);
+    color: var(--theme-text);
+}
+
+@media (width >= 801px) {
+    body {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #content {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: auto;
+
+        @include scrollbar(var(--theme-bg));
+    }
+
+    #foot {
+        flex: 0 0 32rem;
+        order: -1;
+        position: relative;
+        overflow: auto;
+
+        @include scrollbar(var(--theme-surface));
+    }
+
+    #menu, #lang {
+        position: static;
+        width: auto;
+    }
+}
+
+@media (width <= 800px) {
+    #content {
+        padding-top: 4rem;
+    }
+
+    #menu {
+        border-color: var(--theme-primary);
+        box-shadow: 0 .2rem 2rem 0 rgb(0 0 0 / 26%);
+    }
+}
