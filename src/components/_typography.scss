@@ -1,60 +1,46 @@
-@use 'sass:color';
-@use '../colors' as *;
-
 html {
     font-size: 62.5%;
 }
 
 body {
-    background: $color-bg;
-    color: $color-text;
+    background: var(--theme-bg);
+    color: var(--theme-text);
     font: 400 1.4rem/1.4 Verdana, Geneva, sans-serif;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: stretch;
-
-    @media (prefers-color-scheme: dark) {
-        background: $color-bg--dark;
-        color: $color-text--dark;
-    }
+    min-width: 0;
 }
 
 p, span, div, label {
     color: inherit;
 }
 
-a {
-    color: $color-primary;
+a, a:visited, button.link {
+    color: var(--theme-primary);
     transition: opacity .25s ease;
+}
 
-    &:hover {
-        color: color.adjust($color-primary, $lightness: -6%, $space: hsl);
-        text-decoration: none;
-        opacity: .7;
-    }
-
-    &:visited {
-        color: $color-primary;
-    }
+a:link:hover, a:visited:hover, button.link:hover {
+    color: var(--theme-primary);
+    text-decoration: none;
+    opacity: .7;
 }
 
 h1, #h1 {
     background: none;
     border: none;
-    color: $color-text;
+    color: var(--theme-heading);
     font-size: 2.8rem;
     font-style: normal;
     padding: 0;
     margin: 0;
 
-    @media (prefers-color-scheme: dark) {
-        color: color.to-gamut(color.adjust($color-text--dark, $lightness: 20%, $space: hsl), $method: clip);
-    }
-
     #menu & {
         font-size: 1.2rem;
     }
+}
+
+// Adminer 6 adds its own small logo; the theme draws a bigger one with #h1::before.
+#logo {
+    display: none;
 }
 
 #h1::before {
@@ -76,15 +62,21 @@ h2 {
     font-size: 3.2rem;
     margin: 0 0 1em;
     padding: 0;
-    color: $color-text;
+    color: var(--theme-heading);
     word-spacing: 80vw;
     overflow-wrap: break-word;
 
     &::first-line {
         font-size: 4.8rem;
     }
+}
 
-    @media (prefers-color-scheme: dark) {
-        color: color.to-gamut(color.adjust($color-text--dark, $lightness: 20%, $space: hsl), $method: clip);
-    }
+mark {
+    background: color-mix(in srgb, var(--theme-secondary) 35%, transparent);
+    color: inherit;
+}
+
+:target {
+    background: var(--lit);
+    color: inherit;
 }

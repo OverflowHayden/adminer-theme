@@ -1,19 +1,18 @@
-@use 'sass:color';
-@use '../colors' as *;
-
-#schema  {
+#schema {
     margin: 0;
 
     .table {
-        background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
-        border: .1rem solid color.adjust($color-bg, $lightness: -10%, $space: hsl);
+        background: var(--theme-surface);
+        border: .1rem solid var(--theme-border);
         font-size: 1.2rem;
-        margin: 0;
-        padding: 1em;
 
-        @media (prefers-color-scheme: dark) {
-            background-color: $color-bg--dark;
-            border-color: $color-bg--dark;
+        // Adminer positions the boxes in em, assuming this line height and no vertical padding.
+        line-height: 1.25;
+        margin: 0;
+        padding: 0 .4em;
+
+        a {
+            color: var(--theme-primary);
         }
     }
 }

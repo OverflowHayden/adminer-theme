@@ -11,9 +11,6 @@ importers:
       autoprefixer:
         specifier: ^10.6.1
         version: 10.6.1(postcss@8.5.31)
-      bootstrap-reboot:
-        specifier: ^4.5.4
-        version: 4.5.6
       postcss:
         specifier: ^8.5.31
         version: 8.5.31
@@ -335,9 +332,6 @@ packages:
     resolution: {integrity: sha512-yiVKDX+qCMRKBE084lXvq9EcwFUhKZ2nU8TK1EQQuOgPNR/lmbGxXOeDdlGUqC2Zz11Cs9rk1d/8NfgBmlkt0w==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-
-  bootstrap-reboot@4.5.6:
-    resolution: {integrity: sha512-V3czvZrmSQP6lmaaJE5spc4sFbqeNDHyjhVTj4EaeVgh5p2maQpDxr+fJP8GfasvP8RG2hWbka15r3Z+OXLwRw==}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -1299,8 +1293,6 @@ snapshots:
       postcss-value-parser: 4.2.0
 
   baseline-browser-mapping@2.11.33: {}
-
-  bootstrap-reboot@4.5.6: {}
 
   braces@3.0.3:
     dependencies:

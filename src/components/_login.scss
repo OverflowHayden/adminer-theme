@@ -2,11 +2,21 @@
     background: none;
 }
 
+// Absolutely positioned by Adminer in the top right corner of #foot, i.e. the sidebar.
 .logout {
-    right: calc(100% - 32rem);
+    background: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
     z-index: 2;
-    margin: 0;
+    margin: 1.5rem;
     padding: 0;
+
+    span {
+        font-size: 1.2rem;
+        opacity: .7;
+    }
 
     input[type="submit"] {
         background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPmxvZ291dDwvdGl0bGU+PHBhdGggZD0iTTEwLDJWNEgyMlYyMEgxMHYySDI0VjJabTAsNy40MDhMMTIuOTYzLDEyLDEwLDE0LjU5MlYxM0gyVjExaDhaTTgsNVY5SDB2Nkg4djRsOC03WiIgZmlsbD0iI2Y0NWQzNCIvPjwvc3ZnPg==") no-repeat center center / 100%;
@@ -17,11 +27,13 @@
         width: 2.2rem;
         height: 2.2rem;
         text-indent: -999em;
-        margin: 1.5rem;
+        margin: 0;
         padding: 0;
         transition: opacity .25s ease;
 
         &:hover, &:focus {
+            background-color: transparent;
+            box-shadow: none;
             outline: none;
             opacity: .7;
         }

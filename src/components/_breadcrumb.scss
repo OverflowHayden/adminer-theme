@@ -1,6 +1,10 @@
 #breadcrumb {
     background: none;
     position: static;
+    height: auto;
+    line-height: inherit;
+    white-space: normal;
+    overflow-wrap: anywhere;
     margin: 0 0 2rem;
     padding: 0;
 }

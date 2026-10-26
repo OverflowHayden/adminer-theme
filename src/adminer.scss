@@ -1,5 +1,7 @@
-@use 'bootstrap-reboot/index' as reboot;
+@use 'reset';
+@use 'root';
 @use 'components/typography';
+@use 'components/layout';
 @use 'components/code';
 @use 'components/breadcrumb';
 @use 'components/message';

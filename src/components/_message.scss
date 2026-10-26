@@ -2,8 +2,12 @@
 
 .error, .message {
     padding: .8em 1em;
-    margin-bottom: 1.4em;
+    margin: 0 0 1.4em;
     border-radius: .4rem;
+
+    b {
+        background: none;
+    }
 }
 
 .message {
@@ -16,4 +20,9 @@
     background: rgba($color-error, .16);
     border: .2rem solid $color-error;
     color: $color-error;
+}
+
+td .error {
+    padding: .2em .4em;
+    margin: 0;
 }

@@ -1,26 +1,17 @@
-@use 'sass:color';
-@use '../colors' as *;
-
 table {
-    border: .1rem solid color.adjust($color-bg, $lightness: -10%, $space: hsl);
+    border: .1rem solid var(--theme-border);
     font-size: 1.2rem;
     margin: 0 0 2.4rem;
-
-    @media (prefers-color-scheme: dark) {
-        border-color: $color-bg--dark;
-    }
 
     code {
         padding: .4em;
     }
 
     th a, td a {
-        @media (prefers-color-scheme: dark) {
-            color: color.adjust(color.to-gamut(color.adjust($color-primary, $saturation: 80%, $space: hsl), $method: clip), $lightness: 34%, $space: hsl);
+        color: var(--theme-table-link);
 
-            &:visited {
-                color: color.adjust($color-primary, $lightness: 34%, $space: hsl);
-            }
+        &:visited {
+            color: var(--theme-table-link-visited);
         }
     }
 }
@@ -28,57 +19,68 @@ table {
 th, td {
     background: none;
     border: none;
+    border-bottom: .1rem solid var(--theme-row-border);
     padding: .5rem 3.6rem .5rem 1.6rem;
     height: 3.6rem;
     vertical-align: middle;
 }
 
+// Adminer makes the whole <thead> sticky.
 thead {
+    top: -40px;
+
     th, td {
-        background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
-        box-shadow: inset 0 -.3rem 0 0 $color-primary;
+        background: var(--theme-surface);
+        border-bottom: none;
+        box-shadow: inset 0 -.3rem 0 0 var(--theme-primary);
+        color: var(--theme-text);
         font-size: 1.4rem;
         font-weight: 500;
         padding: .6rem 3.6rem .9rem 1.6rem;
-        position: sticky;
-        top: -4.1rem;
 
-        @media (prefers-color-scheme: dark) {
-            background: $color-bg--dark;
+        a {
+            color: var(--theme-primary);
         }
     }
 }
 
-tbody {
-    tr {
-        border-bottom: .1rem solid color.adjust($color-bg, $lightness: -4%, $space: hsl);
-
-        @media (prefers-color-scheme: dark) {
-            border-color: $color-bg--dark;
-        }
-
-        &:hover th, &:hover td {
-            background: color.adjust($color-bg, $lightness: -2%, $space: hsl);
-
-            @media (prefers-color-scheme: dark) {
-                background: color.adjust($color-bg--dark, $lightness: 8%, $space: hsl);
-            }
-        }
-    }
-
-    .odd td {
-        background: none;
-    }
+tbody tr:hover th, tbody tr:hover td {
+    background: var(--theme-row-hover);
 }
 
-.js .checkable .checked td, .js .checkable .checked th {
-    background: color.adjust($color-bg, $lightness: -10%, $space: hsl);
-
-    @media (prefers-color-scheme: dark) {
-        background: color.adjust($color-bg--dark, $lightness: 10%, $space: hsl);
-    }
+.odds tbody tr, .odds tbody tr:nth-child(2n) {
+    background: none;
 }
 
-.js .column {
-    background: transparent;
+// The column with the edit link and row checkbox, rendered outside the table border.
+td.hover, tr:hover td.hover, .js .checkable .checked td.hover {
+    background: var(--theme-bg);
+    border-bottom: none;
+}
+
+// The first column stays in view when a wide table scrolls horizontally.
+tbody th.sticky, tbody td.sticky {
+    background: var(--theme-bg);
+}
+
+.js .checkable .checked td, .js .checkable .checked th,
+.js .checkable .checked:hover td, .js .checkable .checked:hover th {
+    background: var(--theme-row-checked);
+    color: inherit;
+}
+
+.js .checkable .checked a {
+    color: var(--theme-table-link);
+}
+
+// The sort/search pop-up in a column header.
+.column {
+    background: var(--theme-surface);
+    border: .1rem solid var(--theme-border);
+    border-left: none;
+    padding: .4rem 1rem;
+}
+
+#edit-fields tbody tr:hover td, #edit-fields tbody tr:hover th {
+    background: var(--theme-row-hover);
 }

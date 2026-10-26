@@ -1,0 +1,47 @@
+@use 'sass:color';
+@use 'colors' as *;
+
+// Theme colors as custom properties. Adminer's own variables (--bg, --fg, --dim, --lit) are set too,
+// so the rules of Adminer's default.css and dark.css that use them pick up the theme colors.
+html {
+    --theme-primary: #{$color-primary};
+    --theme-secondary: #{$color-secondary};
+    --theme-text: #{$color-text};
+    --theme-heading: #{$color-text};
+    --theme-bg: #{$color-bg};
+    --theme-surface: #{color.adjust($color-bg, $lightness: -4%, $space: hsl)};
+    --theme-input: #{color.adjust($color-bg, $lightness: -3%, $space: hsl)};
+    --theme-input-hover: #{color.adjust($color-bg, $lightness: -4%, $space: hsl)};
+    --theme-input-focus: #{color.adjust($color-bg, $lightness: -6%, $space: hsl)};
+    --theme-row-hover: #{color.adjust($color-bg, $lightness: -2%, $space: hsl)};
+    --theme-row-checked: #{color.adjust($color-bg, $lightness: -10%, $space: hsl)};
+    --theme-row-border: #{color.adjust($color-bg, $lightness: -4%, $space: hsl)};
+    --theme-border: #{color.adjust($color-bg, $lightness: -10%, $space: hsl)};
+    --theme-table-link: #{$color-primary};
+    --theme-table-link-visited: #{$color-primary};
+    --theme-gutter: 4rem;
+    --bg: var(--theme-bg);
+    --fg: var(--theme-text);
+    --dim: var(--theme-surface);
+    --lit: #{rgba($color-primary, .14)};
+
+    @media (prefers-color-scheme: dark) {
+        --theme-text: #{$color-text--dark};
+        --theme-heading: #{color.to-gamut(color.adjust($color-text--dark, $lightness: 20%, $space: hsl), $method: clip)};
+        --theme-bg: #{color.adjust($color-bg--dark, $lightness: 4%, $space: hsl)};
+        --theme-surface: #{$color-bg--dark};
+        --theme-input: #{color.adjust($color-bg--dark, $lightness: -2%, $space: hsl)};
+        --theme-input-hover: #{$color-bg--dark};
+        --theme-input-focus: #{$color-bg--dark};
+        --theme-row-hover: #{color.adjust($color-bg--dark, $lightness: 8%, $space: hsl)};
+        --theme-row-checked: #{color.adjust($color-bg--dark, $lightness: 10%, $space: hsl)};
+        --theme-row-border: #{$color-bg--dark};
+        --theme-border: #{$color-bg--dark};
+        --theme-table-link: #{color.adjust(color.to-gamut(color.adjust($color-primary, $saturation: 80%, $space: hsl), $method: clip), $lightness: 34%, $space: hsl)};
+        --theme-table-link-visited: #{color.adjust($color-primary, $lightness: 34%, $space: hsl)};
+    }
+
+    @media (width <= 800px) {
+        --theme-gutter: 1.6rem;
+    }
+}

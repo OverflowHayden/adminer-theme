@@ -1,21 +1,14 @@
-@use 'sass:color';
-@use '../colors' as *;
-
 .footer {
-    background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
-    border-top: .2rem solid $color-primary;
-    border-image: none;
-    margin: 0;
+    background: var(--theme-surface);
+    border-top: .2rem solid var(--theme-primary);
+    box-shadow: none;
+    color: var(--theme-text);
+    margin: 2.4rem 0 0;
     padding: 2rem;
     position: relative;
 
-    @media (prefers-color-scheme: dark) {
-        background: $color-bg--dark;
-        color: $color-text--dark;
-    }
-
     fieldset {
-        margin-right: 1em;
+        margin: 0 1em 0 0;
     }
 
     > div {
@@ -32,10 +25,6 @@
     }
 
     select {
-        background: $color-bg;
-
-        @media (prefers-color-scheme: dark) {
-            background: color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
-        }
+        background: var(--theme-bg);
     }
 }
