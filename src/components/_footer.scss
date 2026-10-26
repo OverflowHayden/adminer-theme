@@ -1,5 +1,8 @@
+@use 'sass:color';
+@use '../colors' as *;
+
 .footer {
-    background: darken($color-bg, 4%);
+    background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
     border-top: .2rem solid $color-primary;
     border-image: none;
     margin: 0;
@@ -32,7 +35,7 @@
         background: $color-bg;
 
         @media (prefers-color-scheme: dark) {
-            background: lighten($color-bg--dark, 4%);
+            background: color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
         }
     }
 }

@@ -1,5 +1,8 @@
+@use 'sass:color';
+@use '../colors' as *;
+
 #menu {
-    background: darken($color-bg, 4%);
+    background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
     display: block;
     flex: 0 0 32rem;
     margin: 0;
@@ -11,14 +14,14 @@
     order: -2;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: darken($color-bg, 4%) darken($color-bg, 4%);
+    scrollbar-color: color.adjust($color-bg, $lightness: -4%, $space: hsl) color.adjust($color-bg, $lightness: -4%, $space: hsl);
 
     &::-webkit-scrollbar {
         width: 10px;
     }
 
     &::-webkit-scrollbar-track {
-        background: darken($color-bg, 4%);
+        background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
     }
 
     &:hover {
@@ -56,7 +59,7 @@
         background: $color-bg;
 
         @media (prefers-color-scheme: dark) {
-            background: lighten($color-bg--dark, 4%);
+            background: color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
         }
     }
 
@@ -103,10 +106,10 @@
         line-height: 1.6;
 
         &:hover {
-            background: darken($color-bg, 3%);
+            background: color.adjust($color-bg, $lightness: -3%, $space: hsl);
 
             @media (prefers-color-scheme: dark) {
-                background: lighten($color-bg--dark, 6%);
+                background: color.adjust($color-bg--dark, $lightness: 6%, $space: hsl);
             }
         }
     }

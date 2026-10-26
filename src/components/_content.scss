@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use '../colors' as *;
+
 #content {
     flex: 0 0 calc(100% - 32rem);
     margin: 0;
@@ -24,20 +27,20 @@
     }
 
     @media (prefers-color-scheme: dark) {
-        background: lighten($color-bg--dark, 4%);
+        background: color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
         scrollbar-width: thin;
-        scrollbar-color: lighten($color-bg--dark, 4%) lighten($color-bg--dark, 4%);
+        scrollbar-color: color.adjust($color-bg--dark, $lightness: 4%, $space: hsl) color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
 
         &::-webkit-scrollbar {
             width: 10px;
         }
 
         &::-webkit-scrollbar-track {
-            background: lighten($color-bg--dark, 4%);
+            background: color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
         }
 
         &:hover {
-            scrollbar-color: $color-primary lighten($color-bg--dark, 4%);
+            scrollbar-color: $color-primary color.adjust($color-bg--dark, $lightness: 4%, $space: hsl);
 
             &::-webkit-scrollbar-thumb {
                 background: $color-primary;
@@ -51,7 +54,7 @@
 
     .links {
         display: flex;
-        margin: 0 0 2rem 0;
+        margin: 0 0 2rem;
 
         a {
             border-bottom: .3rem solid transparent;

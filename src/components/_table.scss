@@ -1,5 +1,8 @@
+@use 'sass:color';
+@use '../colors' as *;
+
 table {
-    border: .1rem solid darken($color-bg, 10%);
+    border: .1rem solid color.adjust($color-bg, $lightness: -10%, $space: hsl);
     font-size: 1.2rem;
     margin: 0 0 2.4rem;
 
@@ -12,12 +15,11 @@ table {
     }
 
     th a, td a {
-
         @media (prefers-color-scheme: dark) {
-            color: lighten(saturate($color-primary, 80%), 34%);
+            color: color.adjust(color.to-gamut(color.adjust($color-primary, $saturation: 80%, $space: hsl), $method: clip), $lightness: 34%, $space: hsl);
 
             &:visited {
-                color: lighten($color-primary, 34%);
+                color: color.adjust($color-primary, $lightness: 34%, $space: hsl);
             }
         }
     }
@@ -33,7 +35,7 @@ th, td {
 
 thead {
     th, td {
-        background: darken($color-bg, 4%);
+        background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
         box-shadow: inset 0 -.3rem 0 0 $color-primary;
         font-size: 1.4rem;
         font-weight: 500;
@@ -49,17 +51,17 @@ thead {
 
 tbody {
     tr {
-        border-bottom: .1rem solid darken($color-bg, 4%);
+        border-bottom: .1rem solid color.adjust($color-bg, $lightness: -4%, $space: hsl);
 
         @media (prefers-color-scheme: dark) {
             border-color: $color-bg--dark;
         }
 
         &:hover th, &:hover td {
-            background: darken($color-bg, 2%);
+            background: color.adjust($color-bg, $lightness: -2%, $space: hsl);
 
             @media (prefers-color-scheme: dark) {
-                background: lighten($color-bg--dark, 8%);
+                background: color.adjust($color-bg--dark, $lightness: 8%, $space: hsl);
             }
         }
     }
@@ -70,10 +72,10 @@ tbody {
 }
 
 .js .checkable .checked td, .js .checkable .checked th {
-    background: darken($color-bg, 10%);
+    background: color.adjust($color-bg, $lightness: -10%, $space: hsl);
 
     @media (prefers-color-scheme: dark) {
-        background: lighten($color-bg--dark, 10%);
+        background: color.adjust($color-bg--dark, $lightness: 10%, $space: hsl);
     }
 }
 

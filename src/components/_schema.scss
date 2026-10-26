@@ -1,9 +1,12 @@
+@use 'sass:color';
+@use '../colors' as *;
+
 #schema  {
     margin: 0;
 
     .table {
-        background: darken($color-bg, 4%);
-        border: .1rem solid darken($color-bg, 10%);
+        background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
+        border: .1rem solid color.adjust($color-bg, $lightness: -10%, $space: hsl);
         font-size: 1.2rem;
         margin: 0;
         padding: 1em;

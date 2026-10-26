@@ -1,5 +1,8 @@
+@use 'sass:color';
+@use '../colors' as *;
+
 code {
-    background: darken($color-bg, 4%);
+    background: color.adjust($color-bg, $lightness: -4%, $space: hsl);
     border-radius: .4rem;
     padding: 2rem;
 
